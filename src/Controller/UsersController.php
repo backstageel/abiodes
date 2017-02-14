@@ -131,6 +131,8 @@ class UsersController extends AppController
             }
             $this->Flash->error(__('Nome de Usuário ou Senha Invalidas'));
         }
+
+        $this->viewBuilder()->setLayout('login');
     }
 
     public function logout()
