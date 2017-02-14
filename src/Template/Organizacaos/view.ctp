@@ -1,7 +1,7 @@
 <div class="page-title">
     <div class="title_left">
         <h3>
-            User
+            Organizacao
             <small><?= __('View') ?></small>
         </h3>
     </div>
@@ -20,7 +20,7 @@
             <!-- general form elements -->
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>User
+                    <h2>Organizacao
                         <small><?= __('View') ?></small>
                     </h2>
                     <ul class="nav navbar-right panel_toolbox">
@@ -44,13 +44,11 @@
                 <div class="x_content">
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <?= $this->Form->create($user, array('role' => 'form')) ?>
+                    <?= $this->Form->create($organizacao, array('role' => 'form')) ?>
                     <div class="box-body">
                         <?php
-                                                            echo $this->Form->input('username', ['placeholder' => $user->username, 'disabled' => true]);
-                                    echo $this->Form->input('password', ['placeholder' => $user->password, 'disabled' => true]);
-                                    echo $this->Form->input('group_id', ['options' => $groups, 'empty' => true, 'placeholder' => $user->group_id, 'disabled' => true]);
-                                    echo $this->Form->input('role', ['placeholder' => $user->role, 'disabled' => true]);
+                                                            echo $this->Form->input('pessoa_id', ['options' => $pessoas, 'empty' => true, 'placeholder' => $organizacao->pessoa_id, 'disabled' => true]);
+                                    echo $this->Form->input('data_criacao', ['placeholder' => $organizacao->data_criacao, 'disabled' => true]);
                         ?>
                     </div>
                 <!-- /.box-body -->

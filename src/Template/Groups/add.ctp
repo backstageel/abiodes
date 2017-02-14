@@ -1,7 +1,7 @@
 <div class="page-title">
     <div class="title_left">
         <h3>
-            User
+            Group
             <small><?= __('Add') ?></small>
         </h3>
     </div>
@@ -17,7 +17,7 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>User
+                <h2>Group
                     <small><?= __('Add') ?></small>
                 </h2>
                 <ul class="nav navbar-right panel_toolbox">
@@ -40,13 +40,10 @@
             </div>
             <div class="x_content">
                 <br/>
-                <?= $this->Form->create($user, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
+                <?= $this->Form->create($group, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
 
                 <?php
-                                            echo $this->Form->input('username');
-                                                        echo $this->Form->input('password');
-                                                        echo $this->Form->input('group_id', ['options' => $groups, 'empty' => true]);
-                                                        echo $this->Form->input('role');
+                                            echo $this->Form->input('name');
                                             ?>
                 <div class="ln_solid"></div>
                 <div class="form-group">

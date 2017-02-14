@@ -1,8 +1,13 @@
+<?php
+/**
+  * @var \App\View\AppView $this
+  */
+?>
 <div class="page-title">
     <div class="title_left">
         <h3>
-            User
-            <small><?= __('Add') ?></small>
+            Membro
+            <small><?= __('Edit') ?></small>
         </h3>
     </div>
 
@@ -17,8 +22,8 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_title">
-                <h2>User
-                    <small><?= __('Add') ?></small>
+                <h2>Membro
+                    <small><?= __('Edit') ?></small>
                 </h2>
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -40,13 +45,11 @@
             </div>
             <div class="x_content">
                 <br/>
-                <?= $this->Form->create($user, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
+                <?= $this->Form->create($membro, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
 
                 <?php
-                                            echo $this->Form->input('username');
-                                                        echo $this->Form->input('password');
-                                                        echo $this->Form->input('group_id', ['options' => $groups, 'empty' => true]);
-                                                        echo $this->Form->input('role');
+                                            echo $this->Form->input('lideranca_id', ['options' => $liderancas, 'empty' => true]);
+                                                        echo $this->Form->input('pessoa_id', ['options' => $pessoas, 'empty' => true]);
                                             ?>
                 <div class="ln_solid"></div>
                 <div class="form-group">

@@ -1,7 +1,7 @@
 <div class="page-title">
     <div class="title_left">
         <h3>
-            User
+            Group
             <small><?= __('Index') ?></small>
         </h3>
     </div>
@@ -18,7 +18,7 @@
     <div class="col-xs-12">
       <div class="x_panel">
           <div class="x_title">
-              <h2>User <small><?= __('Index') ?></small></h2>
+              <h2>Group <small><?= __('Index') ?></small></h2>
               <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>
@@ -49,26 +49,16 @@
           <table class="table table-hover table-striped">
             <tr>
               <th><?= $this->Paginator->sort('id') ?></th>
-              <th><?= $this->Paginator->sort('username') ?></th>
-              <th><?= $this->Paginator->sort('password') ?></th>
-              <th><?= $this->Paginator->sort('group_id') ?></th>
-              <th><?= $this->Paginator->sort('role') ?></th>
-              <th><?= $this->Paginator->sort('created') ?></th>
-              <th><?= $this->Paginator->sort('modified') ?></th>
+              <th><?= $this->Paginator->sort('name') ?></th>
               <th><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($users as $user): ?>
+            <?php foreach ($groups as $group): ?>
               <tr>
-                <td><?= $this->Number->format($user->id) ?></td>
-                <td><?= h($user->username) ?></td>
-                <td><?= h($user->password) ?></td>
-                <td><?= $user->has('group') ? $this->Html->link($user->group->name, ['controller' => 'Groups', 'action' => 'view', $user->group->id]) : '' ?></td>
-                <td><?= h($user->role) ?></td>
-                <td><?= h($user->created) ?></td>
-                <td><?= h($user->modified) ?></td>
+                <td><?= $this->Number->format($group->id) ?></td>
+                <td><?= h($group->name) ?></td>
                 <td class="actions" style="white-space:nowrap">
-                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class'=>'btn btn-primary btn-xs']) ?>
-                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
+                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $group->id], ['class'=>'btn btn-primary btn-xs']) ?>
+                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $group->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
                 </td>
               </tr>
             <?php endforeach; ?>

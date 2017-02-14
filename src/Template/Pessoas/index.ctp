@@ -1,7 +1,7 @@
 <div class="page-title">
     <div class="title_left">
         <h3>
-            User
+            Pessoa
             <small><?= __('Index') ?></small>
         </h3>
     </div>
@@ -18,7 +18,7 @@
     <div class="col-xs-12">
       <div class="x_panel">
           <div class="x_title">
-              <h2>User <small><?= __('Index') ?></small></h2>
+              <h2>Pessoa <small><?= __('Index') ?></small></h2>
               <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>
@@ -49,26 +49,26 @@
           <table class="table table-hover table-striped">
             <tr>
               <th><?= $this->Paginator->sort('id') ?></th>
-              <th><?= $this->Paginator->sort('username') ?></th>
-              <th><?= $this->Paginator->sort('password') ?></th>
-              <th><?= $this->Paginator->sort('group_id') ?></th>
-              <th><?= $this->Paginator->sort('role') ?></th>
-              <th><?= $this->Paginator->sort('created') ?></th>
-              <th><?= $this->Paginator->sort('modified') ?></th>
+              <th><?= $this->Paginator->sort('user_id') ?></th>
+              <th><?= $this->Paginator->sort('name') ?></th>
+              <th><?= $this->Paginator->sort('data_nascimento') ?></th>
+              <th><?= $this->Paginator->sort('telemovel') ?></th>
+              <th><?= $this->Paginator->sort('email') ?></th>
+              <th><?= $this->Paginator->sort('nuit') ?></th>
               <th><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($users as $user): ?>
+            <?php foreach ($pessoas as $pessoa): ?>
               <tr>
-                <td><?= $this->Number->format($user->id) ?></td>
-                <td><?= h($user->username) ?></td>
-                <td><?= h($user->password) ?></td>
-                <td><?= $user->has('group') ? $this->Html->link($user->group->name, ['controller' => 'Groups', 'action' => 'view', $user->group->id]) : '' ?></td>
-                <td><?= h($user->role) ?></td>
-                <td><?= h($user->created) ?></td>
-                <td><?= h($user->modified) ?></td>
+                <td><?= $this->Number->format($pessoa->id) ?></td>
+                <td><?= $pessoa->has('user') ? $this->Html->link($pessoa->user->id, ['controller' => 'Users', 'action' => 'view', $pessoa->user->id]) : '' ?></td>
+                <td><?= h($pessoa->name) ?></td>
+                <td><?= h($pessoa->data_nascimento) ?></td>
+                <td><?= h($pessoa->telemovel) ?></td>
+                <td><?= h($pessoa->email) ?></td>
+                <td><?= h($pessoa->nuit) ?></td>
                 <td class="actions" style="white-space:nowrap">
-                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id], ['class'=>'btn btn-primary btn-xs']) ?>
-                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
+                  <?= $this->Html->link(__('Edit'), ['action' => 'edit', $pessoa->id], ['class'=>'btn btn-primary btn-xs']) ?>
+                  <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $pessoa->id], ['confirm' => __('Confirm to delete this entry?'), 'class'=>'btn btn-danger btn-xs']) ?>
                 </td>
               </tr>
             <?php endforeach; ?>
