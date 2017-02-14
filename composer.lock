@@ -54,16 +54,16 @@
         },
         {
             "name": "backstageel/cakephp-gentelella-theme",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/backstageel/cakephp-gentelella-theme.git",
-                "reference": "6b8d997c11f58a1eb3921718d842ed0ff8ec477b"
+                "reference": "221dfbef0d36c733cafd821ad70ca3df76fe360a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/backstageel/cakephp-gentelella-theme/zipball/6b8d997c11f58a1eb3921718d842ed0ff8ec477b",
-                "reference": "6b8d997c11f58a1eb3921718d842ed0ff8ec477b",
+                "url": "https://api.github.com/repos/backstageel/cakephp-gentelella-theme/zipball/221dfbef0d36c733cafd821ad70ca3df76fe360a",
+                "reference": "221dfbef0d36c733cafd821ad70ca3df76fe360a",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,7 @@
                 "plugin",
                 "templates"
             ],
-            "time": "2016-11-10T10:05:44+00:00"
+            "time": "2017-02-14T10:05:25+00:00"
         },
         {
             "name": "cakephp/cakephp",
