@@ -10,6 +10,7 @@
                         <li><a href="<?= $this->Url->build(['controller'=>'organizacaos','action'=>'index'])?>">Organizadores</a></li>
                         <li><a href="<?= $this->Url->build(['controller'=>'liderancas','action'=>'index'])?>">Líderes</a></li>
                         <li><a href="<?= $this->Url->build(['controller'=>'membros','action'=>'index'])?>">Membros</a></li>
+                        <li><a href="<?= $this->Url->build(['controller'=>'pessoas','action'=>'index'])?>">Pessoas</a></li>
                         <li><a href="<?= $this->Url->build(['controller'=>'produtos','action'=>'index'])?>">Produtos</a></li>
                     </ul>
                 </li>

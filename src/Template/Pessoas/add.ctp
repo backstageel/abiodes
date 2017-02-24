@@ -43,9 +43,9 @@
                 <?= $this->Form->create($pessoa, array('role' => 'form', 'class' => 'form-horizontal form-label-left', 'id' => 'form')) ?>
 
                 <?php
-                                            echo $this->Form->input('user_id', ['options' => $users, 'empty' => true]);
+                                            echo $this->Form->input('user_id', ['options' => $users, 'default'=>1]);
                                                         echo $this->Form->input('name');
-                                                        echo $this->Form->input('data_nascimento');
+                                                        echo $this->Form->input('data_nascimento',['value'=>'1900-01-01']);
                                                         echo $this->Form->input('telemovel');
                                                         echo $this->Form->input('email');
                                                         echo $this->Form->input('nuit');
